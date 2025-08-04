@@ -1,4 +1,4 @@
-# ColorPicker
+# Androidx_Preference_V2
 ### LATEST-VERSION
 
 [![](https://jitpack.io/v/alphatech-apps/Androidx_Preference_V2.svg)](https://jitpack.io/#alphatech-apps/Androidx_Preference_V2)
@@ -38,67 +38,174 @@ Add view to your prefferences layout:
     app:allowDividerAbove="false"
     app:allowDividerBelow="false"/>
 
+<PreferenceCategory
+android:layout="@layout/preference_layout_compact_category_small"
+app:allowDividerAbove="true"
+app:allowDividerBelow="true"/>
+
+<SwitchPreferenceMaterial
+android:layout="@layout/preference_layout_compact_switch_material"/>
+
+<CheckBoxPreference
+android:layout="@layout/preference_layout_compact_checkbox"/>
+
+<ListPreference
+android:layout="@layout/preference_layout_compact_double"/>
+
+<MultiSelectListPreference
+android:layout="@layout/preference_layout_compact_double"/>
+
+<EditTextPreference
+android:layout="@layout/preference_layout_compact_double"/>
+
+<SeekBarPreference
+android:layout="@layout/preference_layout_compact_seekbar"/>
+
+<DropDownPreference
+android:layout="@layout/preference_layout_compact_dropdown"/>
+
+<Preference
+android:layout="@layout/preference_layout_compact_double"/>
+
+<Preference
+android:layout="@layout/preference_layout_compact_double_red"/>
+
+ ```
+
+
+### 2 Compact No Icon
+```xml
     <PreferenceCategory
-        android:layout="@layout/preference_layout_compact_category_small"
+    android:layout="@layout/preference_layout_compact_noicon_category_big"
+    app:allowDividerAbove="false"
+    app:allowDividerBelow="false"/>
+
+    <PreferenceCategory
+        android:layout="@layout/preference_layout_compact_noicon_category_small"
         app:allowDividerAbove="true"
         app:allowDividerBelow="true"/>
         
     <SwitchPreferenceMaterial
-        android:layout="@layout/preference_layout_compact_switch_material"/>
+        android:layout="@layout/preference_layout_compact_noicon_switch_material"/>
 
     <CheckBoxPreference
-        android:layout="@layout/preference_layout_compact_checkbox"/>
+        android:layout="@layout/preference_layout_compact_noicon_checkbox"/>
 
     <ListPreference
-        android:layout="@layout/preference_layout_compact_double"/>
+        android:layout="@layout/preference_layout_compact_noicon_double"/>
 
     <MultiSelectListPreference
-        android:layout="@layout/preference_layout_compact_double"/>
+        android:layout="@layout/preference_layout_compact_noicon_double"/>
         
         <EditTextPreference
-            android:layout="@layout/preference_layout_compact_double"/>
+            android:layout="@layout/preference_layout_compact_noicon_double"/>
 
         <SeekBarPreference
-            android:layout="@layout/preference_layout_compact_seekbar"/>
+            android:layout="@layout/preference_layout_compact_noicon_seekbar"/>
 
         <DropDownPreference
-            android:layout="@layout/preference_layout_compact_dropdown"/>
+            android:layout="@layout/preference_layout_compact_noicon_dropdown"/>
 
         <Preference
-            android:layout="@layout/preference_layout_compact_double"/>
+            android:layout="@layout/preference_layout_compact_noicon_double"/>
 
             <Preference
-            android:layout="@layout/preference_layout_compact_double_red"/>
-
+            android:layout="@layout/preference_layout_compact_noicon_double_red"/>
 
  ```
+
+
+### 3 Material
+```xml
+    <PreferenceCategory
+    android:layout="@layout/preference_layout_compactmaterial_category_big"
+    app:allowDividerAbove="false"
+    app:allowDividerBelow="false"/>
+
+    <PreferenceCategory
+        android:layout="@layout/preference_layout_material_category_small"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"/>
+        
+    <SwitchPreferenceMaterial
+        android:layout="@layout/preference_layout_material_switch_material"/>
+
+    <CheckBoxPreference
+        android:layout="@layout/preference_layout_material_checkbox"/>
+
+    <ListPreference
+        android:layout="@layout/preference_layout_material_double"/>
+
+    <MultiSelectListPreference
+        android:layout="@layout/preference_layout_material_double"/>
+        
+        <EditTextPreference
+            android:layout="@layout/preference_layout_material_double"/>
+
+        <SeekBarPreference
+            android:layout="@layout/preference_layout_material_seekbar"/>
+
+        <DropDownPreference
+            android:layout="@layout/preference_layout_material_dropdown"/>
+
+        <Preference
+            android:layout="@layout/preference_layout_material_double"/>
+
+            <Preference
+            android:layout="@layout/preference_layout_material_double_red"/>
+
+ ```
+
+
+### 4 Material No Icon
+```xml
+    <PreferenceCategory
+    android:layout="@layout/preference_layout_material_noicon_category_big"
+    app:allowDividerAbove="false"
+    app:allowDividerBelow="false"/>
+
+    <PreferenceCategory
+        android:layout="@layout/preference_layout_material_noicon_category_small"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"/>
+        
+    <SwitchPreferenceMaterial
+        android:layout="@layout/preference_layout_material_noicon_switch_material"/>
+
+    <CheckBoxPreference
+        android:layout="@layout/preference_layout_material_noicon_checkbox"/>
+
+    <ListPreference
+        android:layout="@layout/preference_layout_material_noicon_double"/>
+
+    <MultiSelectListPreference
+        android:layout="@layout/preference_layout_material_noicon_double"/>
+        
+        <EditTextPreference
+            android:layout="@layout/preference_layout_material_noicon_double"/>
+
+        <SeekBarPreference
+            android:layout="@layout/preference_layout_material_noicon_seekbar"/>
+
+        <DropDownPreference
+            android:layout="@layout/preference_layout_material_noicon_dropdown"/>
+
+        <Preference
+            android:layout="@layout/preference_layout_material_noicon_double"/>
+
+            <Preference
+            android:layout="@layout/preference_layout_material_noicon_double_red"/>
+
+ ```
+
 
 Setup JAVA:
  ```java
 
  ```
 
-or add other >>>>
 
- ```java
-
- ```
-
-Listeners:
-
- ```java
-
- ```
-
-
-Other Methods on Menu Preference:
-
-```java
-
-```
-
-
-## full activity for example
+## Full activity for example
 .....................
 ### res/xml/preferences.xml:
 ```xml
