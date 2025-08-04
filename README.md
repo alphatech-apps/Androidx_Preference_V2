@@ -199,12 +199,6 @@ android:layout="@layout/preference_layout_compact_double_red"/>
  ```
 
 
-Setup JAVA:
- ```java
-
- ```
-
-
 ## Full activity for example
 .....................
 ### res/xml/preferences.xml:
