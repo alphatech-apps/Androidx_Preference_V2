@@ -61,7 +61,7 @@ Other Methods on Menu Preference:
 
 ## full activity for example
 .....................
-res/xml/preferences.xml:
+### res/xml/preferences.xml:
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
@@ -479,7 +479,8 @@ res/xml/preferences.xml:
 </androidx.preference.PreferenceScreen>
  ```
 
-SettingsActivity:
+.....................
+### SettingsActivity:
 ```java
 
 public class SettingsActivity extends AppCompatActivity {
