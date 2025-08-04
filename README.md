@@ -74,12 +74,12 @@ MainActivity:
 
 ## Screenshots
 
-#1 Compact
+# 1 Compact
 ![](https://github.com/alphatech-apps/Androidx_Preference_V2/blob/master/Screenshots/1.png)
-#2 Compact without icon:
+# 2 Compact without icon:
 ![](https://github.com/alphatech-apps/Androidx_Preference_V2/blob/master/Screenshots/2.png)
-#3 Material
+# 3 Material
 ![](https://github.com/alphatech-apps/Androidx_Preference_V2/blob/master/Screenshots/3.png)
-#4 Material without icon:
+# 4 Material without icon:
 ![](https://github.com/alphatech-apps/Androidx_Preference_V2/blob/master/Screenshots/4.png)
 
