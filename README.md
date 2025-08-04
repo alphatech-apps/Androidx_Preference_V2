@@ -18,7 +18,7 @@ dependencyResolutionManagement {
 Add the dependency:
 ```gradle
 dependencies {
-	          implementation 'com.github.alphatech-apps:Androidx_Preference_V2:LATEST-VERSION'
+	             implementation 'com.github.alphatech-apps:Androidx_Preference_V2:LATEST-VERSION'
 	}
 ```
 
@@ -35,42 +35,30 @@ Add view to your prefferences layout:
 
 ### 1 Compact
 ```xml
-    <PreferenceCategory
-    android:layout="@layout/preference_layout_compact_category_big"
-    app:allowDividerAbove="false"
-    app:allowDividerBelow="false"/>
 
-<PreferenceCategory
-android:layout="@layout/preference_layout_compact_category_small"
-app:allowDividerAbove="true"
-app:allowDividerBelow="true"/>
+<PreferenceCategory android:layout="@layout/preference_layout_compact_category_big"
+    app:allowDividerAbove="false" app:allowDividerBelow="false" />
 
-<SwitchPreferenceMaterial
-android:layout="@layout/preference_layout_compact_switch_material"/>
+<PreferenceCategory android:layout="@layout/preference_layout_compact_category_small"
+app:allowDividerAbove="true" app:allowDividerBelow="true" />
 
-<CheckBoxPreference
-android:layout="@layout/preference_layout_compact_checkbox"/>
+<SwitchPreferenceMaterial android:layout="@layout/preference_layout_compact_switch_material" />
 
-<ListPreference
-android:layout="@layout/preference_layout_compact_double"/>
+<CheckBoxPreference android:layout="@layout/preference_layout_compact_checkbox" />
 
-<MultiSelectListPreference
-android:layout="@layout/preference_layout_compact_double"/>
+<ListPreference android:layout="@layout/preference_layout_compact_double" />
 
-<EditTextPreference
-android:layout="@layout/preference_layout_compact_double"/>
+<MultiSelectListPreference android:layout="@layout/preference_layout_compact_double" />
 
-<SeekBarPreference
-android:layout="@layout/preference_layout_compact_seekbar"/>
+<EditTextPreference android:layout="@layout/preference_layout_compact_double" />
 
-<DropDownPreference
-android:layout="@layout/preference_layout_compact_dropdown"/>
+<SeekBarPreference android:layout="@layout/preference_layout_compact_seekbar" />
 
-<Preference
-android:layout="@layout/preference_layout_compact_double"/>
+<DropDownPreference android:layout="@layout/preference_layout_compact_dropdown" />
 
-<Preference
-android:layout="@layout/preference_layout_compact_double_red"/>
+<Preference android:layout="@layout/preference_layout_compact_double" />
+
+<Preference android:layout="@layout/preference_layout_compact_double_red" />
 
  ```
 
