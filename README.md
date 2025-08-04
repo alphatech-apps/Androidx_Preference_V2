@@ -23,8 +23,8 @@ Add the dependency:
 
 ```gradle
 dependencies {
-	             implementation 'com.github.alphatech-apps:Androidx_Preference_V2:LATEST-VERSION'
-	}
+	     implementation 'com.github.alphatech-apps:Androidx_Preference_V2:LATEST-VERSION'
+}
 ```
 
 ## Features
