@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ListPreference
+        android:defaultValue="system"
+        android:entries="@array/theme_options"
+        android:entryValues="@array/theme_options_values"
+        android:icon="@drawable/round_signal_wifi_statusbar_connected_no_internet_4_24"
+        android:key="theme_select"
+        android:layout="@layout/preference_layout_compact_double"
+        android:title="App Theme" />
+
+    <MultiSelectListPreference
+        android:defaultValue="@array/weekdays_values"
+        android:dialogTitle="Choose weekdays"
+        android:entries="@array/weekdays_entries"
+        android:entryValues="@array/weekdays_values"
+        android:icon="@drawable/round_signal_wifi_statusbar_connected_no_internet_4_24"
+        android:key="weekdays_selected"
+        android:layout="@layout/preference_layout_compact_double"
+        android:title="Select weekdays" />
+
+
+    <Preference
+        android:icon="@drawable/outline_ads_click_24"
+        android:layout="@layout/preference_layout_compact_double"
+        android:summary="Note: This method is caany subclass initialization. Nidden methods will get called"
+        android:title="Compact Preference" />
+
+    <Preference
+        android:icon="@drawable/outline_ads_click_24"
+        android:layout="@layout/preference_layout_compact_double"
+        android:summary="Note: This method is caany subclass initialization. Nidden methods will get called"
+        android:title="Compact Preference" />
+
+    <PreferenceCategory
+        android:layout="@layout/preference_layout_compact_category_big"
+        android:title="This is PreferenceCategory"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false">
+
+        <SwitchPreferenceMaterial
+            android:defaultValue="1"
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_compact_switch_material"
+            android:summary="This is SwitchPreferenceMaterial summary"
+            android:title="This is SwitchPreferenceMaterial" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:icon="@drawable/outline_alarm_24"
+            android:layout="@layout/preference_layout_compact_checkbox"
+            android:summary="This is CheckBoxPreference summary"
+            android:title="This is CheckBoxPreference" />
+
+        <ListPreference
+            android:entries="@array/theme_options"
+            android:entryValues="@array/theme_options_values"
+            android:icon="@drawable/outline_backup_24"
+            android:key="list_compact"
+            android:layout="@layout/preference_layout_compact_double"
+            android:summary="This is ListPreference summary"
+            android:title="This is ListPreference" />
+
+        <MultiSelectListPreference
+            android:entries="@array/theme_options"
+            android:entryValues="@array/theme_options_values"
+            android:icon="@drawable/outline_alarm_24"
+            android:key="multilist_compact"
+            android:layout="@layout/preference_layout_compact_double"
+            android:summary="This is MultiSelectListPreference summary"
+            android:title="This is MultiSelectListPreference" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preference_layout_compact_category_small"
+        android:title="This is PreferenceCategory"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true">
+
+        <EditTextPreference
+            android:icon="@drawable/outline_backup_24"
+            android:key="edittext_compact"
+            android:layout="@layout/preference_layout_compact_double"
+            android:summary="This is EditTextPreference summary"
+            android:title="This is EditTextPreference" />
+
+        <SeekBarPreference
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_compact_seekbar"
+            android:summary="This is SeekBarPreference summary"
+            android:title="This is SeekBarPreference" />
+
+        <DropDownPreference
+            android:entries="@array/theme_options"
+            android:entryValues="@array/theme_options_values"
+            android:icon="@drawable/outline_cell_tower_24"
+            android:layout="@layout/preference_layout_compact_dropdown"
+            android:summary="This is DropDownPreference summary"
+            android:title="This is DropDownPreference" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/preference_layout_compact_category_small"
+        android:title="This is PreferenceCategory"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false">
+
+        <Preference
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_compact_double"
+            android:summary="Note: This method is caany subclass initialization. Nidden methods will get called"
+            android:title="Compact Preference" />
+
+        <Preference
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_compact_double"
+            android:summary="Note: This method is caany subclass initialization. Note: This method is called from the constructor. Overridden methods will get called
+     * before any subclass initialization."
+            android:title="This is Preference" />
+
+        <Preference
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_compact_double"
+            android:title="This is Preference only Tittle" />
+
+        <Preference
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_compact_double_red"
+            android:title="This is Preference" />
+
+    </PreferenceCategory>
+
+
+    <Preference
+        android:icon="@drawable/outline_ads_click_24"
+        android:layout="@layout/preference_layout_compact_noicon_double"
+        android:summary="Note: This method is caany subclass initialization. Nidden methods will get called"
+        android:title="Compact Preference" />
+
+
+    <Preference
+        android:icon="@drawable/outline_ads_click_24"
+        android:layout="@layout/preference_layout_compact_noicon_double"
+        android:summary="Note: This method is caany subclass initialization. Nidden methods will get called"
+        android:title="Compact Preference" />
+
+    <PreferenceCategory
+        android:layout="@layout/preference_layout_compact_noicon_category_big"
+        android:title="This is PreferenceCategory"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false">
+
+        <SwitchPreferenceMaterial
+            android:defaultValue="1"
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_compact_noicon_switch_material"
+            android:summary="This is SwitchPreferenceMaterial summary"
+            android:title="This is SwitchPreferenceMaterial" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:icon="@drawable/outline_alarm_24"
+            android:layout="@layout/preference_layout_compact_noicon_checkbox"
+            android:summary="This is CheckBoxPreference summary"
+            android:title="This is CheckBoxPreference" />
+
+        <ListPreference
+            android:entries="@array/theme_options"
+            android:entryValues="@array/theme_options_values"
+            android:icon="@drawable/outline_backup_24"
+            android:key="list_compact"
+            android:layout="@layout/preference_layout_compact_noicon_double"
+            android:summary="This is ListPreference summary"
+            android:title="This is ListPreference" />
+
+        <MultiSelectListPreference
+            android:entries="@array/theme_options"
+            android:entryValues="@array/theme_options_values"
+            android:icon="@drawable/outline_alarm_24"
+            android:key="multilist_compact"
+            android:layout="@layout/preference_layout_compact_noicon_double"
+            android:summary="This is MultiSelectListPreference summary"
+            android:title="This is MultiSelectListPreference" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preference_layout_compact_noicon_category_small"
+        android:title="This is PreferenceCategory"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true">
+
+        <EditTextPreference
+            android:icon="@drawable/outline_backup_24"
+            android:key="edittext_compact"
+            android:layout="@layout/preference_layout_compact_noicon_double"
+            android:summary="This is EditTextPreference summary"
+            android:title="This is EditTextPreference" />
+
+        <SeekBarPreference
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_compact_noicon_seekbar"
+            android:summary="This is SeekBarPreference summary"
+            android:title="This is SeekBarPreference" />
+
+        <DropDownPreference
+            android:entries="@array/theme_options"
+            android:entryValues="@array/theme_options_values"
+            android:icon="@drawable/outline_cell_tower_24"
+            android:layout="@layout/preference_layout_compact_noicon_dropdown"
+            android:summary="This is DropDownPreference summary"
+            android:title="This is DropDownPreference" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/preference_layout_compact_noicon_category_small"
+        android:title="This is PreferenceCategory"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false">
+
+        <Preference
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_compact_noicon_double"
+            android:summary="Note: This method is caany subclass initialization. Nidden methods will get called"
+            android:title="This is Preference" />
+
+        <Preference
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_compact_noicon_double"
+            android:summary="Note: This method is caany subclass initialization. Note: This method is called from the constructor. Overridden methods."
+            android:title="This is Preference" />
+
+        <Preference
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_compact_noicon_double"
+            android:title="This is Preference only Tittle" />
+
+        <Preference
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_compact_noicon_double_red"
+            android:title="This is Preference" />
+
+    </PreferenceCategory>
+
+
+    <SwitchPreferenceMaterial
+        android:defaultValue="1"
+        android:icon="@drawable/outline_ads_click_24"
+        android:layout="@layout/preference_layout_material_switch_material"
+        android:summary="This is SwitchPreferenceMaterial summary"
+        android:title="This is SwitchPreferenceMaterial" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:icon="@drawable/outline_alarm_24"
+        android:layout="@layout/preference_layout_material_checkbox"
+        android:summary="This is CheckBoxPreference summary"
+        android:title="This is CheckBoxPreference" />
+
+    <ListPreference
+        android:entries="@array/theme_options"
+        android:entryValues="@array/theme_options_values"
+        android:icon="@drawable/outline_backup_24"
+        android:key="list_compact"
+        android:layout="@layout/preference_layout_material_double"
+        android:summary="This is ListPreference summary"
+        android:title="This is ListPreference" />
+
+    <MultiSelectListPreference
+        android:entries="@array/theme_options"
+        android:entryValues="@array/theme_options_values"
+        android:icon="@drawable/outline_alarm_24"
+        android:key="multilist_compact"
+        android:layout="@layout/preference_layout_material_double"
+        android:summary="This is MultiSelectListPreference summary"
+        android:title="This is MultiSelectListPreference" />
+
+    <PreferenceCategory
+        android:layout="@layout/preference_layout_material_category"
+        android:title="This is PreferenceCategory"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false">
+
+        <EditTextPreference
+            android:icon="@drawable/outline_backup_24"
+            android:key="edittext_compact"
+            android:layout="@layout/preference_layout_material_double"
+            android:summary="This is EditTextPreference summary"
+            android:title="This is EditTextPreference" />
+
+        <SeekBarPreference
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_material_seekbar"
+            android:summary="This is SeekBarPreference summary"
+            android:title="This is SeekBarPreference" />
+
+        <DropDownPreference
+            android:entries="@array/theme_options"
+            android:entryValues="@array/theme_options_values"
+            android:icon="@drawable/outline_cell_tower_24"
+            android:layout="@layout/preference_layout_material_dropdown"
+            android:summary="This is DropDownPreference summary"
+            android:title="This is DropDownPreference" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/preference_layout_material_category"
+        android:title="This is PreferenceCategory"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false">
+
+        <Preference
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_material_double"
+            android:summary="Note: This method is caany subclass initialization. Note: This method is called from the constructor. Overridden methods will get called
+     * before any subclass initialization."
+            android:title="This is Preference" />
+
+        <Preference
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_material_double"
+            android:title="This is Preference only Tittle" />
+
+        <Preference
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_material_double_red"
+            android:title="This is Preference" />
+
+    </PreferenceCategory>
+
+
+    <SwitchPreferenceMaterial
+        android:defaultValue="1"
+        android:icon="@drawable/outline_ads_click_24"
+        android:layout="@layout/preference_layout_material_noicon_switch_material"
+        android:summary="This is SwitchPreferenceMaterial summary"
+        android:title="This is SwitchPreferenceMaterial" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:icon="@drawable/outline_alarm_24"
+        android:layout="@layout/preference_layout_material_noicon_checkbox"
+        android:summary="This is CheckBoxPreference summary"
+        android:title="This is CheckBoxPreference" />
+
+    <ListPreference
+        android:entries="@array/theme_options"
+        android:entryValues="@array/theme_options_values"
+        android:icon="@drawable/outline_backup_24"
+        android:key="list_compact"
+        android:layout="@layout/preference_layout_material_noicon_double"
+        android:summary="This is ListPreference summary"
+        android:title="This is ListPreference" />
+
+    <MultiSelectListPreference
+        android:entries="@array/theme_options"
+        android:entryValues="@array/theme_options_values"
+        android:icon="@drawable/outline_alarm_24"
+        android:key="multilist_compact"
+        android:layout="@layout/preference_layout_material_noicon_double"
+        android:summary="This is MultiSelectListPreference summary"
+        android:title="This is MultiSelectListPreference" />
+
+    <PreferenceCategory
+        android:layout="@layout/preference_layout_material_noicon_category"
+        android:title="This is PreferenceCategory"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false">
+
+        <EditTextPreference
+            android:icon="@drawable/outline_backup_24"
+            android:key="edittext_compact"
+            android:layout="@layout/preference_layout_material_noicon_double"
+            android:summary="This is EditTextPreference summary"
+            android:title="This is EditTextPreference" />
+
+        <SeekBarPreference
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_material_noicon_seekbar"
+            android:summary="This is SeekBarPreference summary"
+            android:title="This is SeekBarPreference" />
+
+        <DropDownPreference
+            android:entries="@array/theme_options"
+            android:entryValues="@array/theme_options_values"
+            android:icon="@drawable/outline_cell_tower_24"
+            android:layout="@layout/preference_layout_material_noicon_dropdown"
+            android:summary="This is DropDownPreference summary"
+            android:title="This is DropDownPreference" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/preference_layout_material_noicon_category"
+        android:title="This is PreferenceCategory"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false">
+
+        <Preference
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_material_noicon_double"
+            android:summary="Note: This method is caany subclass initialization. Note: This method is called from the constructor. Overridden methods will get called
+     * before any subclass initialization."
+            android:title="This is Preference" />
+
+        <Preference
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_material_noicon_double"
+            android:title="This is Preference only Tittle" />
+
+        <Preference
+            android:icon="@drawable/outline_ads_click_24"
+            android:layout="@layout/preference_layout_material_noicon_double_red"
+            android:title="This is Preference" />
+
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

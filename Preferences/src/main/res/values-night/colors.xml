@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="for_material_bg">?colorPrimarySurface</color>
+    <color name="for_compact_bg">#000000</color>
+    <color name="colorOnBackground">#161518</color>
+
+</resources>
