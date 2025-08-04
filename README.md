@@ -29,7 +29,9 @@ dependencies {
 ## Usage
 
 
-Add view to your prefferences layout:
+Add view to your prefferences layout: 
+#### res/xml/preferences.xml:
+
 
 ### 1 Compact
 ```xml
