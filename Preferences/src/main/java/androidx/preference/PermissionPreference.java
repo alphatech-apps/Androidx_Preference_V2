@@ -5,32 +5,34 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-public class PermissionPreference_c extends Preference {
+public class PermissionPreference extends Preference {
 
     private String requestText = "Allow Access";
     private String acceptedText = "Allowed";
+    private boolean allowed = false;
+    private int layoutResId = R.layout.preference_layout_compact_permission; // default
 
     private TextView txtAllowed;
     private TextView txtAllow;
-    private boolean allowed = false;
 
-    public PermissionPreference_c(Context context) {
-        this(context, null);
-    }
-
-    public PermissionPreference_c(Context context, AttributeSet attrs) {
+    public PermissionPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setLayoutResource(R.layout.preference_layout_compact_permission);
 
         if (attrs != null) {
             TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.PermissionPreference);
             String rt = a.getString(R.styleable.PermissionPreference_requestText);
             String at = a.getString(R.styleable.PermissionPreference_acceptedText);
-            allowed = a.getBoolean(R.styleable.PermissionPreference_allowed, false);  // default false
+            allowed = a.getBoolean(R.styleable.PermissionPreference_allowed, false);
+            layoutResId = a.getResourceId(R.styleable.PermissionPreference_layout, layoutResId);
             if (rt != null) requestText = rt;
             if (at != null) acceptedText = at;
             a.recycle();
         }
+    }
+
+    @Override
+    public int getLayoutResource() {
+        return layoutResId; // dynamically return layout
     }
 
     @Override
@@ -40,13 +42,8 @@ public class PermissionPreference_c extends Preference {
         txtAllow = (TextView) holder.findViewById(R.id.txt_allow);
         txtAllowed = (TextView) holder.findViewById(R.id.txt_allowed);
 
-        if (txtAllow != null) {
-            txtAllow.setText(requestText);
-//            txtAllow.setOnClickListener(v -> setAllowed(true));
-        }
-        if (txtAllowed != null) {
-            txtAllowed.setText(acceptedText);
-        }
+        if (txtAllow != null) txtAllow.setText(requestText);
+        if (txtAllowed != null) txtAllowed.setText(acceptedText);
 
         updateAllowedViews();
     }
@@ -88,12 +85,10 @@ public class PermissionPreference_c extends Preference {
         }
     }
 
-    // Optional: programmatically set title
     public void setTitleText(String title) {
         setTitle(title);
     }
 
-    // Optional: programmatically set summary
     public void setSummaryText(String summary) {
         setSummary(summary);
     }

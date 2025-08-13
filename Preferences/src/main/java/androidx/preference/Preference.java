@@ -458,7 +458,7 @@ public class Preference implements Comparable<Preference> {
      *
      * @return The layout resource ID
      */
-    public final int getLayoutResource() {
+    public int getLayoutResource() {
         return mLayoutResId;
     }
 

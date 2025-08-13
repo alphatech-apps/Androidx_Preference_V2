@@ -2,30 +2,46 @@
 <androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PermissionPreference_c
+    <PermissionPreference
+        android:icon="@drawable/round_signal_wifi_statusbar_connected_no_internet_4_24"
         android:key="my_custom_pref"
-        android:title="This is title"
-         android:icon="@drawable/round_signal_wifi_statusbar_connected_no_internet_4_24"
-        app:requestText="Allow Permission"
-        app:acceptedText="aaaaa"/>
-   <PermissionPreference_c_noicon
+        android:summary="This permission required to run app properly"
+        android:title="Notification Permission"
+        app:acceptedText="Permission Granted"
+        app:allowed="false"
+        app:layout="@layout/preference_layout_compact_noicon_permission"
+        app:requestText="Allow Permission" />
+
+    <PermissionPreference
+        android:icon="@drawable/round_signal_wifi_statusbar_connected_no_internet_4_24"
         android:key="my_custom_pref"
-        android:title="This is title"
-         android:icon="@drawable/round_signal_wifi_statusbar_connected_no_internet_4_24"
-        app:requestText="Allow Permission"
-        app:acceptedText="aaaaa"/>
-   <PermissionPreference_m
+        android:summary="This permission required to run app properly"
+        android:title="Storage Permission"
+        app:acceptedText="Permission Granted"
+        app:allowed="true"
+        app:layout="@layout/preference_layout_compact_permission"
+        app:requestText="Allow Permission" />
+
+    <PermissionPreference
+        android:icon="@drawable/round_signal_wifi_statusbar_connected_no_internet_4_24"
         android:key="my_custom_pref"
-        android:title="This is title"
-         android:icon="@drawable/round_signal_wifi_statusbar_connected_no_internet_4_24"
-        app:requestText="Allow Permission"
-        app:acceptedText="aaaaa"/>
-   <PermissionPreference_m_noicon
+        android:summary="This permission required to run app properly"
+        android:title="Draw over other apps "
+        app:acceptedText="Permission Granted"
+        app:allowed="false"
+        app:layout="@layout/preference_layout_material_noicon_permission"
+        app:requestText="Allow Access" />
+
+    <PermissionPreference
+        android:icon="@drawable/round_signal_wifi_statusbar_connected_no_internet_4_24"
         android:key="my_custom_pref"
-        android:title="This is title"
-         android:icon="@drawable/round_signal_wifi_statusbar_connected_no_internet_4_24"
-        app:requestText="Allow Permission"
-        app:acceptedText="aaaaa"/>
+        android:summary="This permission required to run app properly"
+        android:title="Ignore Battery Optimization"
+        app:acceptedText="Allowed"
+        app:allowed="true"
+        app:layout="@layout/preference_layout_material_permission"
+        app:requestText="Add to whitelist" />
+
 
     <ListPreference
         android:defaultValue="system"

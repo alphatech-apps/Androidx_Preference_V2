@@ -359,5 +359,7 @@
         <attr name="requestText" format="string" />
         <attr name="acceptedText" format="string" />
         <attr name="allowed" format="boolean" />
+        <attr name="layout" format="reference" />
+
     </declare-styleable>
 </resources>

@@ -24,7 +24,6 @@ import static org.mockito.Mockito.verify;
 import android.content.Context;
 import android.os.Parcelable;
 
-import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.filters.SmallTest;
@@ -55,7 +54,6 @@ public class PreferenceGroupInitialExpandedChildrenCountTest {
     private List<Preference> mPreferenceList;
 
     @Before
-    @UiThreadTest
     public void setup() {
         MockitoAnnotations.initMocks(this);
         mContext = ApplicationProvider.getApplicationContext();
@@ -73,7 +71,6 @@ public class PreferenceGroupInitialExpandedChildrenCountTest {
      * and without the collapsed child count set.
      */
     @Test
-    @UiThreadTest
     public void createPreferenceGroupAdapter_displayTopLevelPreferences() {
         // No limit, should display all 10 preferences
         PreferenceGroupAdapter preferenceGroupAdapter = new PreferenceGroupAdapter(mScreen);
@@ -104,7 +101,6 @@ public class PreferenceGroupInitialExpandedChildrenCountTest {
      * with and without the collapsed child count set.
      */
     @Test
-    @UiThreadTest
     public void createPreferenceGroupAdapter_displayNestedPreferences() {
         final PreferenceScreen screen = mPreferenceManager.createPreferenceScreen(mContext);
         screen.setKey(PREFERENCE_KEY);
@@ -137,23 +133,20 @@ public class PreferenceGroupInitialExpandedChildrenCountTest {
         for (int i = 0; i <= INITIAL_EXPANDED_COUNT; i++) {
             assertEquals(preferenceList.get(i), preferenceGroupAdapter.getItem(i));
         }
-        assertTrue(
-                preferenceGroupAdapter.getItem(INITIAL_EXPANDED_COUNT + 1) instanceof ExpandButton);
+        assertTrue(preferenceGroupAdapter.getItem(INITIAL_EXPANDED_COUNT + 1) instanceof ExpandButton);
     }
 
     /**
      * Verifies that the correct summary is set for the expand button.
      */
     @Test
-    @UiThreadTest
     public void createPreferenceGroupAdapter_setExpandButtonSummary() {
         mScreen.setInitialExpandedChildrenCount(INITIAL_EXPANDED_COUNT);
         PreferenceGroupAdapter preferenceGroupAdapter = new PreferenceGroupAdapter(mScreen);
         // Preference 5 to preference 9 are collapsed
         CharSequence summary = mPreferenceList.get(INITIAL_EXPANDED_COUNT).getTitle();
         for (int i = INITIAL_EXPANDED_COUNT + 1; i < TOTAL_PREFERENCE; i++) {
-            summary = mContext.getString(R.string.summary_collapsed_preference_list,
-                    summary, mPreferenceList.get(i).getTitle());
+            summary = mContext.getString(R.string.summary_collapsed_preference_list, summary, mPreferenceList.get(i).getTitle());
         }
         final Preference expandButton = preferenceGroupAdapter.getItem(INITIAL_EXPANDED_COUNT);
         assertEquals(summary, expandButton.getSummary());
@@ -163,7 +156,6 @@ public class PreferenceGroupInitialExpandedChildrenCountTest {
      * Verifies that the summary for the expand button only lists visible preferences.
      */
     @Test
-    @UiThreadTest
     public void createPreferenceGroupAdapter_expandButtonSummaryShouldListVisiblePreferencesOnly() {
         mScreen.setInitialExpandedChildrenCount(INITIAL_EXPANDED_COUNT);
         mPreferenceList.get(INITIAL_EXPANDED_COUNT + 1).setVisible(false);
@@ -171,10 +163,8 @@ public class PreferenceGroupInitialExpandedChildrenCountTest {
         PreferenceGroupAdapter preferenceGroupAdapter = new PreferenceGroupAdapter(mScreen);
         // Preference 5 to preference 9 are collapsed, only preferences 5, 7, 8 are visible
         CharSequence summary = mPreferenceList.get(INITIAL_EXPANDED_COUNT).getTitle();
-        summary = mContext.getString(R.string.summary_collapsed_preference_list,
-                summary, mPreferenceList.get(INITIAL_EXPANDED_COUNT + 2).getTitle());
-        summary = mContext.getString(R.string.summary_collapsed_preference_list,
-                summary, mPreferenceList.get(INITIAL_EXPANDED_COUNT + 3).getTitle());
+        summary = mContext.getString(R.string.summary_collapsed_preference_list, summary, mPreferenceList.get(INITIAL_EXPANDED_COUNT + 2).getTitle());
+        summary = mContext.getString(R.string.summary_collapsed_preference_list, summary, mPreferenceList.get(INITIAL_EXPANDED_COUNT + 3).getTitle());
         final Preference expandButton = preferenceGroupAdapter.getItem(INITIAL_EXPANDED_COUNT);
         assertEquals(summary, expandButton.getSummary());
     }
@@ -183,7 +173,6 @@ public class PreferenceGroupInitialExpandedChildrenCountTest {
      * Verifies that clicking the expand button will show all preferences.
      */
     @Test
-    @UiThreadTest
     public void clickExpandButton_shouldShowAllPreferences() {
         mScreen.setInitialExpandedChildrenCount(INITIAL_EXPANDED_COUNT);
 
@@ -202,11 +191,9 @@ public class PreferenceGroupInitialExpandedChildrenCountTest {
      * Verifies that clicking the expand button will notify the registered listener.
      */
     @Test
-    @UiThreadTest
     public void clickExpandButton_shouldNotifyOnExpandButtonClickListener() {
         mScreen.setInitialExpandedChildrenCount(INITIAL_EXPANDED_COUNT);
-        final PreferenceGroup.OnExpandButtonClickListener listener =
-                mock(PreferenceGroup.OnExpandButtonClickListener.class);
+        final PreferenceGroup.OnExpandButtonClickListener listener = mock(PreferenceGroup.OnExpandButtonClickListener.class);
         mScreen.setOnExpandButtonClickListener(listener);
 
         // First showing 5 preference with expand button
@@ -223,20 +210,17 @@ public class PreferenceGroupInitialExpandedChildrenCountTest {
      * instance state.
      */
     @Test
-    @UiThreadTest
     public void saveInstanceState_shouldSaveMaxNumberOfChildrenToShow() {
         // No limit set, should save max value
         Parcelable state = mScreen.onSaveInstanceState();
         assertEquals(PreferenceGroup.SavedState.class, state.getClass());
-        assertEquals(Integer.MAX_VALUE,
-                ((PreferenceGroup.SavedState) state).mInitialExpandedChildrenCount);
+        assertEquals(Integer.MAX_VALUE, ((PreferenceGroup.SavedState) state).mInitialExpandedChildrenCount);
 
         // Has limit set, should save limit
         mScreen.setInitialExpandedChildrenCount(INITIAL_EXPANDED_COUNT);
         state = mScreen.onSaveInstanceState();
         assertEquals(PreferenceGroup.SavedState.class, state.getClass());
-        assertEquals(INITIAL_EXPANDED_COUNT,
-                ((PreferenceGroup.SavedState) state).mInitialExpandedChildrenCount);
+        assertEquals(INITIAL_EXPANDED_COUNT, ((PreferenceGroup.SavedState) state).mInitialExpandedChildrenCount);
     }
 
     /**
@@ -244,13 +228,11 @@ public class PreferenceGroupInitialExpandedChildrenCountTest {
      * preferences to show will be the same.
      */
     @Test
-    @UiThreadTest
     public void restoreInstanceState_noChange_shouldDoNothing() {
         PreferenceGroup.SavedState state;
 
         // Initialized as expanded, restore as expanded, should remain expanded
-        state = new PreferenceGroup.SavedState(
-                Preference.BaseSavedState.EMPTY_STATE, Integer.MAX_VALUE);
+        state = new PreferenceGroup.SavedState(Preference.BaseSavedState.EMPTY_STATE, Integer.MAX_VALUE);
         PreferenceGroupAdapter preferenceGroupAdapter = new PreferenceGroupAdapter(mScreen);
         assertPreferencesAreExpanded(preferenceGroupAdapter);
 
@@ -260,8 +242,7 @@ public class PreferenceGroupInitialExpandedChildrenCountTest {
 
         // Initialized as collapsed, restore as collapsed, should remain collapsed
         mScreen.setInitialExpandedChildrenCount(INITIAL_EXPANDED_COUNT);
-        state = new PreferenceGroup.SavedState(
-                Preference.BaseSavedState.EMPTY_STATE, INITIAL_EXPANDED_COUNT);
+        state = new PreferenceGroup.SavedState(Preference.BaseSavedState.EMPTY_STATE, INITIAL_EXPANDED_COUNT);
         preferenceGroupAdapter = new PreferenceGroupAdapter(mScreen);
         assertPreferencesAreCollapsed(preferenceGroupAdapter);
 
@@ -275,11 +256,8 @@ public class PreferenceGroupInitialExpandedChildrenCountTest {
      * state is being restored.
      */
     @Test
-    @UiThreadTest
     public void restoreHierarchyState_previouslyCollapsed_shouldRestoreToCollapsedState() {
-        PreferenceGroup.SavedState state =
-                new PreferenceGroup.SavedState(
-                        Preference.BaseSavedState.EMPTY_STATE, Integer.MAX_VALUE);
+        PreferenceGroup.SavedState state = new PreferenceGroup.SavedState(Preference.BaseSavedState.EMPTY_STATE, Integer.MAX_VALUE);
         // Initialized as expanded, restore as collapsed, should collapse
         state.mInitialExpandedChildrenCount = INITIAL_EXPANDED_COUNT;
         mScreen.setInitialExpandedChildrenCount(Integer.MAX_VALUE);
@@ -293,11 +271,8 @@ public class PreferenceGroupInitialExpandedChildrenCountTest {
      * state is being restored.
      */
     @Test
-    @UiThreadTest
     public void restoreHierarchyState_previouslyExpanded_shouldRestoreToExpandedState() {
-        PreferenceGroup.SavedState state =
-                new PreferenceGroup.SavedState(
-                        Preference.BaseSavedState.EMPTY_STATE, Integer.MAX_VALUE);
+        PreferenceGroup.SavedState state = new PreferenceGroup.SavedState(Preference.BaseSavedState.EMPTY_STATE, Integer.MAX_VALUE);
         // Initialized as collapsed, restore as expanded, should expand
         state.mInitialExpandedChildrenCount = Integer.MAX_VALUE;
         mScreen.setInitialExpandedChildrenCount(INITIAL_EXPANDED_COUNT);
@@ -318,8 +293,7 @@ public class PreferenceGroupInitialExpandedChildrenCountTest {
     }
 
     // create the number of preference in the corresponding preference group and add it to the cache
-    private void createTestPreferences(PreferenceGroup preferenceGroup,
-            List<Preference> preferenceList, int numPreference) {
+    private void createTestPreferences(PreferenceGroup preferenceGroup, List<Preference> preferenceList, int numPreference) {
         for (int i = 0; i < numPreference; i++) {
             final Preference preference = new Preference(mContext);
             preference.setTitle(PREFERENCE_TITLE_PREFIX + i);
@@ -329,8 +303,7 @@ public class PreferenceGroupInitialExpandedChildrenCountTest {
     }
 
     // add a preference category and add the number of preference to it and the cache
-    private void createTestPreferencesCategory(PreferenceGroup preferenceGroup,
-            List<Preference> preferenceList, int numPreference) {
+    private void createTestPreferencesCategory(PreferenceGroup preferenceGroup, List<Preference> preferenceList, int numPreference) {
         PreferenceCategory category = new PreferenceCategory(mContext);
         preferenceGroup.addPreference(category);
         preferenceList.add(category);
