@@ -6,25 +6,25 @@
         android:key="my_custom_pref"
         android:title="This is title"
          android:icon="@drawable/round_signal_wifi_statusbar_connected_no_internet_4_24"
-        app:requestText="rrrrrr"
+        app:requestText="Allow Permission"
         app:acceptedText="aaaaa"/>
    <PermissionPreference_c_noicon
         android:key="my_custom_pref"
         android:title="This is title"
          android:icon="@drawable/round_signal_wifi_statusbar_connected_no_internet_4_24"
-        app:requestText="rrrrrr"
+        app:requestText="Allow Permission"
         app:acceptedText="aaaaa"/>
    <PermissionPreference_m
         android:key="my_custom_pref"
         android:title="This is title"
          android:icon="@drawable/round_signal_wifi_statusbar_connected_no_internet_4_24"
-        app:requestText="rrrrrr"
+        app:requestText="Allow Permission"
         app:acceptedText="aaaaa"/>
    <PermissionPreference_m_noicon
         android:key="my_custom_pref"
         android:title="This is title"
          android:icon="@drawable/round_signal_wifi_statusbar_connected_no_internet_4_24"
-        app:requestText="rrrrrr"
+        app:requestText="Allow Permission"
         app:acceptedText="aaaaa"/>
 
     <ListPreference
