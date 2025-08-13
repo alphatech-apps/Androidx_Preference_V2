@@ -55,7 +55,7 @@ import org.junit.runner.RunWith;
 @LargeTest
 /**
  * Test for IME visibility when launching
- * {@link androidx.preference.EditTextPreferenceDialogFragmentCompat}.
+ * {@link EditTextPreferenceDialogFragmentCompat}.
  */
 public class EditTextPreferenceDialogFragmentCompatTest {
 

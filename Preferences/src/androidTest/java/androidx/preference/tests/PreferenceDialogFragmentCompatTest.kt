@@ -26,8 +26,8 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.preference.DialogPreference
 import androidx.preference.Preference
-import androidx.preference.PreferenceDialogFragmentCompat
-import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.helper.PreferenceDialogFragmentCompat
+import androidx.preference.helper.PreferenceFragmentCompat
 import androidx.preference.test.R
 import androidx.preference.tests.helpers.PreferenceTestHelperActivity
 import androidx.test.filters.LargeTest

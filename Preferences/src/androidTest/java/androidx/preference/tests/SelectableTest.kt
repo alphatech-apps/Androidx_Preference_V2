@@ -21,8 +21,8 @@ import android.graphics.drawable.StateListDrawable
 import android.os.Build
 import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
-import androidx.preference.PreferenceFragmentCompat
-import androidx.preference.PreferenceViewHolder
+import androidx.preference.helper.PreferenceFragmentCompat
+import androidx.preference.helper.PreferenceViewHolder
 import androidx.preference.test.R
 import androidx.preference.tests.helpers.PreferenceTestHelperActivity
 import androidx.test.annotation.UiThreadTest

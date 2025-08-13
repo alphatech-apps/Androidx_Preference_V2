@@ -20,8 +20,8 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.widget.TextView
 import androidx.preference.Preference
-import androidx.preference.PreferenceFragmentCompat
-import androidx.preference.PreferenceViewHolder
+import androidx.preference.helper.PreferenceFragmentCompat
+import androidx.preference.helper.PreferenceViewHolder
 import androidx.preference.test.R
 import androidx.preference.tests.helpers.PreferenceTestHelperActivity
 import androidx.test.annotation.UiThreadTest

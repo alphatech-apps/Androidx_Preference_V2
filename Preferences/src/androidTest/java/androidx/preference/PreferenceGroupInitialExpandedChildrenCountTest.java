@@ -24,6 +24,8 @@ import static org.mockito.Mockito.verify;
 import android.content.Context;
 import android.os.Parcelable;
 
+import androidx.preference.PreferenceGroupAdapter;
+import androidx.preference.PreferenceManager;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.filters.SmallTest;

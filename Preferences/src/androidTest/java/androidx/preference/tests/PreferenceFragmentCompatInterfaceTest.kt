@@ -32,7 +32,7 @@ import androidx.fragment.app.FragmentContainerView
 import androidx.fragment.app.commit
 import androidx.preference.EditTextPreference
 import androidx.preference.Preference
-import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.helper.PreferenceFragmentCompat
 import androidx.preference.PreferenceScreen
 import androidx.preference.test.R
 import androidx.test.espresso.Espresso.onView
