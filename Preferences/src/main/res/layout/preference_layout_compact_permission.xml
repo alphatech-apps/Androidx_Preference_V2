@@ -42,11 +42,43 @@
     </LinearLayout>
 
 
-    <com.google.android.material.materialswitch.MaterialSwitch
-        android:id="@android:id/switch_widget"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginEnd="10dp"
-        android:background="@null"
-        android:minWidth="58dip" />
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_allow"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@drawable/permission_button_round_bg"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Allow Access"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/txt_allowed"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:drawableLeft="@drawable/check_circle_svgrepo_com"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Allowed"
+            android:textAlignment="center"
+            android:textSize="16sp"
+
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+
 </LinearLayout>

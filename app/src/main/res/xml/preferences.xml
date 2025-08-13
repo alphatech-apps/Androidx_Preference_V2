@@ -2,6 +2,31 @@
 <androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <PermissionPreference_c
+        android:key="my_custom_pref"
+        android:title="This is title"
+         android:icon="@drawable/round_signal_wifi_statusbar_connected_no_internet_4_24"
+        app:requestText="rrrrrr"
+        app:acceptedText="aaaaa"/>
+   <PermissionPreference_c_noicon
+        android:key="my_custom_pref"
+        android:title="This is title"
+         android:icon="@drawable/round_signal_wifi_statusbar_connected_no_internet_4_24"
+        app:requestText="rrrrrr"
+        app:acceptedText="aaaaa"/>
+   <PermissionPreference_m
+        android:key="my_custom_pref"
+        android:title="This is title"
+         android:icon="@drawable/round_signal_wifi_statusbar_connected_no_internet_4_24"
+        app:requestText="rrrrrr"
+        app:acceptedText="aaaaa"/>
+   <PermissionPreference_m_noicon
+        android:key="my_custom_pref"
+        android:title="This is title"
+         android:icon="@drawable/round_signal_wifi_statusbar_connected_no_internet_4_24"
+        app:requestText="rrrrrr"
+        app:acceptedText="aaaaa"/>
+
     <ListPreference
         android:defaultValue="system"
         android:entries="@array/theme_options"

@@ -354,4 +354,10 @@
         <!-- Whether a divider is allowed to draw after the last item -->
         <attr name="allowDividerAfterLastItem" />
     </declare-styleable>
+
+    <declare-styleable name="PermissionPreference">
+        <attr name="requestText" format="string" />
+        <attr name="acceptedText" format="string" />
+        <attr name="allowed" format="boolean" />
+    </declare-styleable>
 </resources>
